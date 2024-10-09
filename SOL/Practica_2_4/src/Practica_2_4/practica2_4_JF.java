@@ -12,6 +12,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
         initComponents();
         tickVerde1.setVisible(false);
         tickVerde2.setVisible(false);
+        textoValidado1.setVisible(false);
+        textoValidado2.setVisible(false);        
     }
 
     @SuppressWarnings("unchecked")
@@ -19,6 +21,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
     private void initComponents() {
 
         jProgressBar1 = new javax.swing.JProgressBar();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         PanelFondo = new javax.swing.JPanel();
         campoTexto1_1 = new javax.swing.JTextField();
         campoTexto2_1 = new javax.swing.JTextField();
@@ -50,6 +54,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         tickVerde1 = new javax.swing.JLabel();
         tickVerde2 = new javax.swing.JLabel();
+        textoValidado1 = new javax.swing.JLabel();
+        textoValidado2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GUI mixta");
@@ -129,6 +135,7 @@ public class practica2_4_JF extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(radioBoton1_1);
         radioBoton1_1.setText("Opcion 1");
         radioBoton1_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,6 +143,7 @@ public class practica2_4_JF extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(radioBoton2_1);
         radioBoton2_1.setText("Opcion 2");
         radioBoton2_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +151,7 @@ public class practica2_4_JF extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(radioBoton3_1);
         radioBoton3_1.setText("Opcion 3");
         radioBoton3_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,12 +161,15 @@ public class practica2_4_JF extends javax.swing.JFrame {
 
         textoCorreo1.setText("Correo");
 
+        buttonGroup2.add(radioBoton1_2);
         radioBoton1_2.setText("Opcion 1");
         radioBoton1_2.setEnabled(false);
 
+        buttonGroup2.add(radioBoton2_2);
         radioBoton2_2.setText("Opcion 2");
         radioBoton2_2.setEnabled(false);
 
+        buttonGroup2.add(radioBoton3_2);
         radioBoton3_2.setText("Opcion 3");
         radioBoton3_2.setEnabled(false);
 
@@ -205,6 +217,10 @@ public class practica2_4_JF extends javax.swing.JFrame {
         tickVerde2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fotos/tickVerde (1).png"))); // NOI18N
         tickVerde2.setEnabled(false);
 
+        textoValidado1.setText("Correo Valido.");
+
+        textoValidado2.setText("Correo Valido.");
+
         javax.swing.GroupLayout PanelFondoLayout = new javax.swing.GroupLayout(PanelFondo);
         PanelFondo.setLayout(PanelFondoLayout);
         PanelFondoLayout.setHorizontalGroup(
@@ -218,24 +234,6 @@ public class practica2_4_JF extends javax.swing.JFrame {
                         .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelFondoLayout.createSequentialGroup()
                                 .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
-                                        .addComponent(radioBoton3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
-                                        .addComponent(textoCorreo1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(53, 53, 53)))
-                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(PanelFondoLayout.createSequentialGroup()
-                                        .addComponent(checkBoton3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(comboElementos1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(PanelFondoLayout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(campoTexto2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tickVerde1))))
-                            .addGroup(PanelFondoLayout.createSequentialGroup()
-                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PanelFondoLayout.createSequentialGroup()
                                         .addComponent(radioBoton1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -243,52 +241,74 @@ public class practica2_4_JF extends javax.swing.JFrame {
                                     .addGroup(PanelFondoLayout.createSequentialGroup()
                                         .addComponent(radioBoton2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(checkBoton2_1)))
+                                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(checkBoton3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(checkBoton2_1))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Spinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(campoTexto1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Slider1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
-                                .addComponent(toggleBoton1)
-                                .addGap(57, 57, 57)))
-                        .addGap(27, 27, 27))
-                    .addGroup(PanelFondoLayout.createSequentialGroup()
-                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(campoTexto1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(comboElementos1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(PanelFondoLayout.createSequentialGroup()
-                                .addComponent(textoCorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(53, 53, 53)
-                                .addComponent(campoTexto2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tickVerde2))
-                            .addGroup(PanelFondoLayout.createSequentialGroup()
-                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(radioBoton3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(radioBoton2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(radioBoton1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PanelFondoLayout.createSequentialGroup()
-                                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(checkBoton2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(checkBoton1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(Spinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(campoTexto1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(PanelFondoLayout.createSequentialGroup()
-                                        .addComponent(checkBoton3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(comboElementos2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(textoCorreo1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(53, 53, 53))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
+                                        .addComponent(radioBoton3_1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)))
+                                .addGap(6, 6, 6)
+                                .addComponent(campoTexto2_1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tickVerde1)))
+                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelFondoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Slider1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
+                                        .addComponent(toggleBoton1)
+                                        .addGap(57, 57, 57)))
+                                .addGap(27, 27, 27))
+                            .addGroup(PanelFondoLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(textoValidado1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(PanelFondoLayout.createSequentialGroup()
+                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(radioBoton3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radioBoton2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radioBoton1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelFondoLayout.createSequentialGroup()
+                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(checkBoton2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(checkBoton1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Spinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoTexto1_2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(PanelFondoLayout.createSequentialGroup()
+                                .addComponent(checkBoton3_2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comboElementos2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                         .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
                                 .addComponent(toggleBoton2)
                                 .addGap(59, 59, 59))
                             .addComponent(Slider2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25))))
+                        .addGap(25, 25, 25))
+                    .addGroup(PanelFondoLayout.createSequentialGroup()
+                        .addComponent(textoCorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(85, 85, 85)
+                        .addComponent(campoTexto2_2, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tickVerde2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textoValidado2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
         PanelFondoLayout.setVerticalGroup(
             PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,19 +334,24 @@ public class practica2_4_JF extends javax.swing.JFrame {
                             .addComponent(comboElementos1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(radioBoton3_1)))
                     .addGroup(PanelFondoLayout.createSequentialGroup()
-                        .addContainerGap(44, Short.MAX_VALUE)
+                        .addContainerGap(53, Short.MAX_VALUE)
                         .addComponent(Slider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(toggleBoton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelFondoLayout.createSequentialGroup()
-                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(campoTexto2_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textoCorreo1))
-                        .addGap(12, 12, 12)
+                        .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelFondoLayout.createSequentialGroup()
+                                .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(campoTexto2_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textoCorreo1))
+                                .addGap(12, 12, 12))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
+                                .addComponent(textoValidado1)
+                                .addGap(18, 18, 18)))
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                         .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelFondoLayout.createSequentialGroup()
                                 .addComponent(Slider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,13 +374,15 @@ public class practica2_4_JF extends javax.swing.JFrame {
                                     .addComponent(comboElementos2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(checkBoton3_2)
                                     .addComponent(radioBoton3_2))
-                                .addGap(33, 33, 33)
+                                .addGap(21, 21, 21)
                                 .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(campoTexto2_2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(textoCorreo2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(tickVerde2))))
-                        .addGap(18, 18, 18)
+                                    .addGroup(PanelFondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(textoValidado2)
+                                        .addComponent(tickVerde2)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14))
                     .addGroup(PanelFondoLayout.createSequentialGroup()
@@ -419,7 +446,7 @@ public class practica2_4_JF extends javax.swing.JFrame {
 
         String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
 
-        if (!campoTexto2_1.getText().trim().matches(regex)) {
+        if (!campoTexto2_1.getText().matches(regex)) {
             campoTexto2_1.setBorder(new LineBorder(Color.RED));
             campoTexto2_2.setBorder(new LineBorder(Color.RED));
             tickVerde1.setVisible(false);
@@ -431,6 +458,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
         campoTexto2_2.setBorder(new LineBorder(Color.GREEN));
         tickVerde1.setVisible(true);
         tickVerde2.setVisible(true);
+        textoValidado1.setVisible(true);
+        textoValidado2.setVisible(true);
 
     }//GEN-LAST:event_campoTexto2_1KeyReleased
 
@@ -439,14 +468,10 @@ public class practica2_4_JF extends javax.swing.JFrame {
     }//GEN-LAST:event_campoTexto2_1ActionPerformed
 
     private void campoTexto1_1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_campoTexto1_1KeyReleased
-        String textoOriginal = campoTexto1_1.getText();
-        String textoInvertido = "";
-
-        for (int i = textoOriginal.length() - 1; i >= 0; i--) {
-            textoInvertido += textoOriginal.charAt(i);
-        }
-
-        campoTexto1_2.setText(textoInvertido);
+        
+        StringBuilder strb = new StringBuilder();
+        strb.append(campoTexto1_1.getText());
+        campoTexto1_2.setText(strb.reverse().toString());
     }//GEN-LAST:event_campoTexto1_1KeyReleased
 
     private void campoTexto1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTexto1_1ActionPerformed
@@ -507,6 +532,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
     private javax.swing.JSlider Slider2;
     private javax.swing.JSpinner Spinner1;
     private javax.swing.JSpinner Spinner2;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JTextField campoTexto1_1;
     private javax.swing.JTextField campoTexto1_2;
     private javax.swing.JTextField campoTexto2_1;
@@ -530,6 +557,8 @@ public class practica2_4_JF extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioBoton3_2;
     private javax.swing.JLabel textoCorreo1;
     private javax.swing.JLabel textoCorreo2;
+    private javax.swing.JLabel textoValidado1;
+    private javax.swing.JLabel textoValidado2;
     private javax.swing.JLabel tickVerde1;
     private javax.swing.JLabel tickVerde2;
     private javax.swing.JToggleButton toggleBoton1;
